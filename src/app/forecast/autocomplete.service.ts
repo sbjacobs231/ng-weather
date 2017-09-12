@@ -20,7 +20,7 @@ export class AutocompleteService {
 
   autocomplete(userInput: string) {
     userInput = userInput.replace(/ /g, '%20');
-    let url = `http://autocomplete.wunderground.com/aq?query=${userInput}&cb=JSONP_CALLBACK`;
+    let url = `https://autocomplete.wunderground.com/aq?query=${userInput}&cb=JSONP_CALLBACK`;
     return this.jsonp.request(url)
         .map(res => {
           let cities = [];

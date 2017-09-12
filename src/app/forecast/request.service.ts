@@ -22,24 +22,7 @@ export class RequestService implements OnInit {
     this.store.dispatch(new WeatherLocationActions.UpdateLocation(address)); // Update State for tracking
     this.store.dispatch(new WeatherLocationActions.UpdateCode(zmw));
     this.store.dispatch(new WeatherLocationActions.UpdateAutoResults([])); // Empty Autocomplete Results to rid of dropdown
-    // return this.http.get(`http://api.wunderground.com/api/47be6887c60a72bf${interval}${zmw}.json`)
-    //   .subscribe(
-    //     data => {
-    //       console.log('data passed');
-    //       if (interval === '/daily') {
-    //         const dayCast = data['forecast']['simpleforecast']['forecastday'];
-    //         this.store.dispatch(new WeatherLocationActions.UpdateDailyArray(dayCast));
-    //       } else if (interval === '/hourly') {
-    //         const hourlyCast = data['hourly_forecast'];
-    //         this.store.dispatch(new WeatherLocationActions.UpdateHourlyArray(hourlyCast));
-    //       }
-    //     },
-    //     error => {
-    //       console.log('error passed');
-    //       console.log(error);
-    //     }
-    //   );
-    this.http.get(`http://api.wunderground.com/api/47be6887c60a72bf/forecast10day${zmw}.json`)
+    this.http.get(`https://api.wunderground.com/api/47be6887c60a72bf/forecast10day${zmw}.json`)
       .subscribe(
         data => {
           console.log('data passed');
@@ -51,7 +34,7 @@ export class RequestService implements OnInit {
           console.log(error);
         }
       );
-    return this.http.get(`http://api.wunderground.com/api/47be6887c60a72bf/hourly${zmw}.json`)
+    return this.http.get(`https://api.wunderground.com/api/47be6887c60a72bf/hourly${zmw}.json`)
       .subscribe(
         data => {
           console.log('data passed');
