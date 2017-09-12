@@ -1,0 +1,37 @@
+<!-- <div *ngFor="let daily of (dailyState | async).dailyArray | slice:0:7; let i = index">
+  <div class="col-xs-3">
+    <h4>{{ daily.date.weekday }}</h4>
+    <img src="{{ daily.icon_url }}" alt="{{ daily.conditions }}">
+    <p>{{ daily.conditions }}</p>
+    <p style="color: red;">High: {{ daily.high.fahrenheit }}</p>
+    <p style="color: blue;">Low: {{ daily.low.fahrenheit }}</p>
+    <p>Precip: {{ daily.pop }}%</p>
+    <p>Wind: {{ daily.avewind.mph }} mph</p>
+    <p>Humidity: {{ daily.avehumidity }}%</p>
+  </div>
+</div> -->
+
+<table style="width:100%">
+  <tr>
+    <th>Day</th>
+    <th>Skies</th>
+    <th>Description</th>
+    <th>High</th>
+    <th>Low</th>
+    <th>Wind</th>
+    <th>Precip</th>
+    <th>Humidity</th>
+  </tr>
+  <tr *ngFor="let daily of (dailyState | async).dailyArray | slice:0:10; let i = index">
+    <td>
+      <b>{{ daily.date.weekday }}</b>
+    </td>
+    <td><img src="{{ daily.icon_url }}" alt="{{ daily.conditions }}"></td>
+    <td><b>{{ daily.conditions }}</b></td>
+    <td>{{ daily.high.fahrenheit }} °F</td>
+    <td>{{ daily.low.fahrenheit }} °F</td>
+    <td>{{ daily.avewind.mph }} mph</td>
+    <td>{{ daily.pop }}%</td>
+    <td>{{ daily.avehumidity }}%</td>
+  </tr>
+</table>

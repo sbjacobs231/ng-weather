@@ -1,0 +1,54 @@
+h3 {
+  color: white;
+  font-size: 25px;
+  padding-left: 12px;
+}
+input {
+  margin: 20px 0;
+  background: transparent;
+  border: none;
+  font-size: 50px;
+  color: white;
+  height: auto;
+}
+.form-control {
+  box-shadow: none;
+}
+.nav-buttons {
+  text-align: center;
+}
+.nav-buttons button {
+  border-radius: 25px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  color: #d2d2d2;
+  margin: 0 20px 40px;
+  width: 120px;
+  outline: none;
+}
+button.active {
+  border: solid !important;
+  color: white !important;
+}
+img {
+  width: 150px;
+}
+.currentValues {
+  text-align: center;
+}
+.major {
+  font-size: 100px;
+  color: white;
+  height: 100px;
+}
+.range {
+  font-size: 40px;
+  color: #d2d2d2;
+}
+.content {
+  padding: 0;
+}
+.searchHeader {
+  min-width: 1200px;
+}

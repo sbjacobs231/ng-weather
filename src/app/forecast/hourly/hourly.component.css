@@ -1,0 +1,19 @@
+.tupper {
+  width: 100%;
+}
+th {
+  text-transform: uppercase;
+}
+th,
+td {
+  width: 16.66%;
+}
+span {
+  color: #d2d2d2;
+}
+table {
+  margin-bottom: 100px;
+}
+tr {
+  height: 50px;
+}
