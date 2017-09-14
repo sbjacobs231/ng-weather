@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  font-family: "Readventor";
+  font-family: "ReadventorRegular";
   src: url("./assets/fonts/texgyreadventor-regular.otf");
-  src: url("./assets/fonts/texgyreadventor-bold.otf") format("bold");
 }
 body,
 .container {
@@ -12,8 +11,9 @@ body {
   background-color: #f6f6f6;
 }
 * {
-  font-family: "Readventor", Helvetica, Verdana, sans-serif;
+  font-family: "ReadventorRegular", Helvetica, Verdana, sans-serif;
 }
-/*.container {
-  min-width: 950px;
-}*/
+@font-face {
+  font-family: "ReadventorBold";
+  src: url("./assets/fonts/texgyreadventor-bold.otf");
+}

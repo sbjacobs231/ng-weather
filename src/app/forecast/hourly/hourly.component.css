@@ -18,23 +18,20 @@ th {
 th,
 td {
   width: 15%;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 0.5px;
   color: #555555;
-}
-span {
-  color: #d2d2d2;
 }
 tr {
   height: 50px;
   border-bottom: solid 1px rgba(151, 151, 151, 0.5);
 }
-b {
-  text-transform: uppercase;
-  font-weight: 600;
-}
 span {
   text-transform: lowercase;
   color: #555555;
+}
+span.date {
+  text-transform: uppercase;
+  font-family: "ReadventorBold";
 }

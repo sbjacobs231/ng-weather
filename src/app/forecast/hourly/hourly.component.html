@@ -10,7 +10,7 @@
   <tr class="tupper" *ngFor="let hour of (hourlyState | async).hourlyArray | slice:0:12; let i = index">
     <td style="width: 25%;">
       <span>{{ hour.FCTTIME.civil }} </span>
-      <b>{{ hour.FCTTIME.weekday_name_abbrev }}</b>
+      <span class="date">{{ hour.FCTTIME.weekday_name_abbrev }}</span>
     </td>
     <td style="width: 5%;"><img src="{{ hour.icon_url }}" alt="{{ hour.condition}}"></td>
     <td style="width: 25%;">{{ hour.condition }}</td>

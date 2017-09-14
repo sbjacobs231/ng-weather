@@ -18,7 +18,7 @@ th {
 th,
 td {
   width: 12%;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 0.5px;
   color: #555555;
@@ -30,7 +30,5 @@ tr {
 }
 b {
   text-transform: uppercase;
-  font-weight: 600;
+  font-family: "ReadventorBold";
 }
-/*5531 jay barscoe
-149 3 days*/

@@ -68,3 +68,9 @@ button.active {
 .content {
   padding: 0;
 }
+
+@media only screen and (max-width: 1262px) {
+  .nav-buttons button {
+    width: 125px;
+  }
+}
