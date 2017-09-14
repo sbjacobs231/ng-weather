@@ -37,9 +37,9 @@
       <h3>Humidity</h3>
     </div>
     <div
-      *ngIf="(today | async).country === 'US' || (today | async).country === 'CA' || (today | async).country === 'AU';else othercontent"
       class="col-xs-12 map">
       <img
+        *ngIf="(today | async).country === 'US' || (today | async).country === 'CA' || (today | async).country === 'AU';else othercontent"
         src="http://api.wunderground.com/api/47be6887c60a72bf/animatedradar/image.gif?centerlat={{ (today | async).latitude }}&centerlon={{ (today | async).longitude }}&radius=100&width=770&height=300&newmaps=1&delay=25&num=15"
         alt="map">
     </div>
