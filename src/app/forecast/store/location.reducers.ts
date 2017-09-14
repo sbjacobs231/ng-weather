@@ -7,17 +7,27 @@ export interface AppState {
 export interface State {
   wLocation: string;
   cityCode: string;
+  latitude: string;
+  longitude: string;
   dailyArray: string[];
   hourlyArray: string[];
   autoResults: string[];
+  sunrise: string;
+  sunset: string;
+  country: string;
 }
 
 const initialState: State = {
   wLocation: 'San Francisco, CA',
   cityCode: '/q/zmw:94102.1.99999',
+  latitude: '37.779999',
+  longitude: '-122.419998',
   dailyArray: [],
   hourlyArray: [],
-  autoResults: []
+  autoResults: [],
+  sunrise: '',
+  sunset: '',
+  country: 'US'
 }
 
 export function weatherLocationReducer(state = initialState, action: WeatherLocationActions.WeatherLocationActions) {
@@ -31,6 +41,16 @@ export function weatherLocationReducer(state = initialState, action: WeatherLoca
       return {
         ...state,
         cityCode: action.payload
+      }
+    case WeatherLocationActions.UPDATE_LATITUDE:
+      return {
+        ...state,
+        latitude: action.payload
+      }
+    case WeatherLocationActions.UPDATE_LONGITUDE:
+      return {
+        ...state,
+        longitude: action.payload
       }
     case WeatherLocationActions.UPDATE_DAILY_ARRAY:
       return {
@@ -46,6 +66,21 @@ export function weatherLocationReducer(state = initialState, action: WeatherLoca
       return {
         ...state,
         autoResults: action.payload
+      }
+    case WeatherLocationActions.UPDATE_SUNRISE:
+      return {
+        ...state,
+        sunrise: action.payload
+      }
+    case WeatherLocationActions.UPDATE_SUNSET:
+      return {
+        ...state,
+        sunset: action.payload
+      }
+    case WeatherLocationActions.UPDATE_COUNTRY:
+      return {
+        ...state,
+        country: action.payload
       }
     default:
       return state;

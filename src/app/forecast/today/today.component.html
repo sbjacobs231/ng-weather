@@ -1,0 +1,53 @@
+
+<div class="row" *ngFor="let current of (today | async).hourlyArray | slice:0:1">
+  <div class="col-xs-4 leftColumn" *ngFor="let range of (today | async).dailyArray | slice:0:1">
+    <h2>Currently:</h2>
+    <div class="col-xs-12" style="display: table; text-align: center;">
+      <div class="circle">
+        <h1>{{ current.temp.english}}°F</h1>
+        <p>H: {{ range.high.fahrenheit}}° | L: {{ range.low.fahrenheit}}°</p>
+      </div>
+    </div>
+    <div class="col-xs-12 leftColumn">
+      <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/92246-200.png" alt="sunset-img">
+      <h3>Sunrise: {{ (today | async).sunrise.hour }}:{{ (today | async).sunrise.minute}} am</h3>
+      <h3>Sunset: {{ (today | async).sunset.hour }}:{{ (today | async).sunset.minute }} pm</h3>
+    </div>
+  </div>
+  <div class="col-xs-8 rightColumn">
+    <div class="col-xs-4">
+      <img src="{{ current.icon_url }}" alt="{{ current.icon }}">
+    </div>
+    <div class="col-xs-4">
+      <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/7702-200.png" alt="wind-icon">
+    </div>
+    <div class="col-xs-4">
+      <h3 style="font-size: 48px;letter-spacing: 0.4px;">{{ current.humidity }}%</h3>
+    </div>
+  </div>
+  <div class="col-xs-8 rightColumn">
+    <div class="col-xs-4">
+      <h3>{{ current.condition }}</h3>
+      <h3 style="font-size: 20px;letter-spacing: 0.5px;">Feels like: {{ current.feelslike.english }}°F</h3>
+    </div>
+    <div class="col-xs-4" *ngFor="let range of (today | async).dailyArray | slice:0:1">
+      <h3>{{ range.avewind.mph }} mph</h3>
+    </div>
+    <div class="col-xs-4">
+      <h3>Humidity</h3>
+    </div>
+    <div
+      *ngIf="(today | async).country === 'US' || (today | async).country === 'CA' || (today | async).country === 'AU';else othercontent"
+      class="col-xs-12 map">
+      <img
+        src="http://api.wunderground.com/api/47be6887c60a72bf/animatedradar/image.gif?centerlat={{ (today | async).latitude }}&centerlon={{ (today | async).longitude }}&radius=100&width=770&height=300&newmaps=1&delay=25&num=15"
+        alt="map">
+    </div>
+    <ng-template #othercontent>
+      <img
+        src="http://api.wunderground.com/api/47be6887c60a72bf/animatedradar/image.gif?centerlat={{ (today | async).latitude }}&centerlon={{ (today | async).longitude }}&radius=100&width=770&height=300&newmaps=1&delay=25&num=1"
+        alt="map">
+      <!-- <img src="http://api.wunderground.com/api/47be6887c60a72bf/animatedradar/animatedsatellite{{ (today | async).cityCode }}.gif?radius=100&width=770&height=300&newmaps=1&delay=50&num=15" alt=""> -->
+    </ng-template>
+  </div>
+</div>

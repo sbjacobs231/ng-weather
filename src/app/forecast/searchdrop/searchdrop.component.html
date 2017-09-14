@@ -1,5 +1,5 @@
 <div *ngIf="(matches | async).autoResults.length !== 0">
   <p
     *ngFor="let match of (matches | async).autoResults | slice:0:5"
-    (click)="onClick($event, match.l)">{{ match.name }}</p>
+    (click)="onClick($event, match.l, match.lat, match.lon)">{{ match.name }}</p>
 </div>

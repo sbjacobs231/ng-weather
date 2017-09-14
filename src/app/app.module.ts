@@ -16,7 +16,10 @@ import { HourlyComponent } from './forecast/hourly/hourly.component';
 import { DailyComponent } from './forecast/daily/daily.component';
 
 import { AutocompleteService } from './forecast/autocomplete.service';
+import { RequestService } from './forecast/request.service';
+import { ClickValueService } from './forecast/searchdrop/click-value.service';
 import { SearchdropComponent } from './forecast/searchdrop/searchdrop.component';
+import { TodayComponent } from './forecast/today/today.component';
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { SearchdropComponent } from './forecast/searchdrop/searchdrop.component'
     ForecastComponent,
     HourlyComponent,
     DailyComponent,
-    SearchdropComponent
+    SearchdropComponent,
+    TodayComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,7 @@ import { SearchdropComponent } from './forecast/searchdrop/searchdrop.component'
     StoreModule.forRoot({weatherLocation: weatherLocationReducer}),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [],
+  providers: [RequestService, AutocompleteService, ClickValueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

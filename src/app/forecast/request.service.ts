@@ -22,24 +22,20 @@ export class RequestService implements OnInit {
     this.store.dispatch(new WeatherLocationActions.UpdateLocation(address)); // Update State for tracking
     this.store.dispatch(new WeatherLocationActions.UpdateCode(zmw));
     this.store.dispatch(new WeatherLocationActions.UpdateAutoResults([])); // Empty Autocomplete Results to rid of dropdown
-    this.http.get(`https://api.wunderground.com/api/47be6887c60a72bf/forecast10day${zmw}.json`)
+    return this.http.get(`https://api.wunderground.com/api/47be6887c60a72bf/forecast10day/hourly/astronomy/conditions${zmw}.json`)
       .subscribe(
         data => {
           console.log('data passed');
-            const dayCast = data['forecast']['simpleforecast']['forecastday'];
-            this.store.dispatch(new WeatherLocationActions.UpdateDailyArray(dayCast));
-        },
-        error => {
-          console.log('error passed');
-          console.log(error);
-        }
-      );
-    return this.http.get(`https://api.wunderground.com/api/47be6887c60a72bf/hourly${zmw}.json`)
-      .subscribe(
-        data => {
-          console.log('data passed');
+          const dayCast = data['forecast']['simpleforecast']['forecastday'];
+          this.store.dispatch(new WeatherLocationActions.UpdateDailyArray(dayCast));
           const hourlyCast = data['hourly_forecast'];
           this.store.dispatch(new WeatherLocationActions.UpdateHourlyArray(hourlyCast));
+          const sunrise = data['sun_phase']['sunrise'];
+          this.store.dispatch(new WeatherLocationActions.UpdateSunrise(sunrise));
+          const sunset = data['sun_phase']['sunset'];
+          this.store.dispatch(new WeatherLocationActions.UpdateSunset(sunset));
+          const country = data['current_observation']['display_location']['country'];
+          this.store.dispatch(new WeatherLocationActions.UpdateCountry(country));
         },
         error => {
           console.log('error passed');

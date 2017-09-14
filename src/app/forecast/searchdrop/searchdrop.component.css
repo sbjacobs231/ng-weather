@@ -1,10 +1,12 @@
 div {
   width: 400px;
-  background:rgba(255,255,255,0.1);
+  /*background:rgba(255,255,255,0.1);*/
   border-radius: 5px;
   position: absolute;
   top: 110px;
   z-index: 1;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 div:before {
@@ -16,11 +18,11 @@ div:before {
   content: '';
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid rgba(255,255,255,0.1);
+  border-bottom: 20px solid #fff;
 }
 
 p {
-  color: white;
+  color: #5b5b5b;;
   font-size: 23px;
   padding-left: 15px;
   margin: 5px 0;

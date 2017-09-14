@@ -23,10 +23,12 @@ export class SearchdropComponent implements OnInit {
     this.matches = this.store.select('weatherLocation');
   }
 
-  onClick(selection, zmw) {
+  onClick(selection, zmw, lat, lon) {
     const updateSelection = selection.srcElement.innerHTML;
     this.clickValueService.searchValue.next(updateSelection); // Subject
     this.requestService.getDailyForecast(updateSelection, zmw);
+    this.store.dispatch(new WeatherLocationActions.UpdateLatitude(lat));
+    this.store.dispatch(new WeatherLocationActions.UpdateLongitude(lon));
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
@@ -15,9 +15,10 @@ import * as fromLocation from './store/location.reducers';
   selector: 'app-forecast',
   templateUrl: './forecast.component.html',
   styleUrls: ['./forecast.component.css'],
-  providers: [RequestService, AutocompleteService, ClickValueService]
+  providers: []
 })
 export class ForecastComponent implements OnInit {
+  @ViewChild('autocomplete') private inputSearch: ElementRef;
   today: number = Date.now();
   address: Observable<fromLocation.State>;
   inputValue: any;
@@ -35,6 +36,7 @@ export class ForecastComponent implements OnInit {
         this.inputValue = data;
       }
     );
+    this.inputSearch.nativeElement.focus();
   }
 
   runAutocomplete(userInput) {

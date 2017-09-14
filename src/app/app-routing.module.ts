@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ForecastComponent } from './forecast/forecast.component';
 import { DailyComponent } from './forecast/daily/daily.component';
 import { HourlyComponent } from './forecast/hourly/hourly.component';
+import { TodayComponent } from './forecast/today/today.component';
 
 const appRoutes: Routes = [
   // { path: '', component: ForecastComponent, children: [
@@ -12,7 +13,9 @@ const appRoutes: Routes = [
   //   { path: 'hourly', component: HourlyComponent }
   // ] },
   // { path: '**', redirectTo: '/forecast/daily'}
-  { path: '', redirectTo: 'daily', pathMatch: 'full' },
+  //
+  // { path: '', redirectTo: 'daily', pathMatch: 'full' },
+  { path: '', component: TodayComponent },
   { path: 'daily', component: DailyComponent },
   { path: 'hourly', component: HourlyComponent },
   { path: '**', redirectTo: 'daily'}

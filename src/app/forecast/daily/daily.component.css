@@ -1,13 +1,36 @@
-th {
-  text-transform: uppercase;
+table {
+  margin-top: 85px;
+  margin-bottom: 100px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 1px #979797;
 }
-th, td {
-  width: 12.5%;
+.heading {
+  background-color: #cee1f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.tupper {
+  width: 100%;
+}
+th {
+  font-weight: normal;
+}
+th,
+td {
+  width: 12%;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #555555;
 }
 tr {
   width: 100%;
   height: 50px;
+  border-bottom: solid 1px rgba(151, 151, 151, 0.5);
 }
-table {
-  margin-bottom: 100px;
+b {
+  text-transform: uppercase;
+  font-weight: 600;
 }
+/*5531 jay barscoe
+149 3 days*/

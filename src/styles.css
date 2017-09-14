@@ -1,37 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-/* ======== Google Maps API styling ========= */
-.pac-container {
-  background-color: pink;
-  background:rgba(255,255,255,0.1);
+@font-face {
+  font-family: "Readventor";
+  src: url("./assets/fonts/texgyreadventor-regular.otf");
+  src: url("./assets/fonts/texgyreadventor-bold.otf") format("bold");
 }
-.pac-item,
-.pac-item-query,
-.pac-matched {
-  color: white;
-  font: white;
-  border: none;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: normal;
-}
-.pac-item-selected,
-.pac-item:active,
-.pac-item:hover,
-.pac-item:focus
- {
-  background: #00CCFF !important;
-}
-.pac-item {
-  padding-left: 12px;
-}
-.pac-icon {
-  display: none;
-}
-/* ========== End Google Maps API styling ======== */
-
-* {
-  font-family: Helvetica, Verdana, sans-serif;
-}
+body,
 .container {
-  min-width: 950px;
+  min-width: 1000px;
 }
+* {
+  font-family: "Readventor", Helvetica, Verdana, sans-serif;
+}
+/*.container {
+  min-width: 950px;
+}*/

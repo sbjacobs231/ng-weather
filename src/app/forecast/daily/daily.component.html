@@ -1,35 +1,22 @@
-<!-- <div *ngFor="let daily of (dailyState | async).dailyArray | slice:0:7; let i = index">
-  <div class="col-xs-3">
-    <h4>{{ daily.date.weekday }}</h4>
-    <img src="{{ daily.icon_url }}" alt="{{ daily.conditions }}">
-    <p>{{ daily.conditions }}</p>
-    <p style="color: red;">High: {{ daily.high.fahrenheit }}</p>
-    <p style="color: blue;">Low: {{ daily.low.fahrenheit }}</p>
-    <p>Precip: {{ daily.pop }}%</p>
-    <p>Wind: {{ daily.avewind.mph }} mph</p>
-    <p>Humidity: {{ daily.avehumidity }}%</p>
-  </div>
-</div> -->
-
 <table style="width:100%">
-  <tr>
-    <th>Day</th>
-    <th>Skies</th>
-    <th>Description</th>
+  <tr class="tupper heading">
+    <th style="width: 17.5%">Day</th>
+    <th style="width: 5%"></th>
+    <th style="width: 17.5%">Description</th>
     <th>High</th>
     <th>Low</th>
     <th>Wind</th>
-    <th>Precip</th>
+    <th>Precipitation</th>
     <th>Humidity</th>
   </tr>
-  <tr *ngFor="let daily of (dailyState | async).dailyArray | slice:0:10; let i = index">
-    <td>
-      <b>{{ daily.date.weekday }}</b>
+  <tr class="tupper" *ngFor="let daily of (dailyState | async).dailyArray | slice:0:10; let i = index">
+    <td style="width: 17.5%">
+      {{ daily.date.weekday_short }}. <b>{{ daily.date.monthname_short }}. {{ daily.date.day }}</b>
     </td>
-    <td><img src="{{ daily.icon_url }}" alt="{{ daily.conditions }}"></td>
-    <td><b>{{ daily.conditions }}</b></td>
-    <td>{{ daily.high.fahrenheit }} °F</td>
-    <td>{{ daily.low.fahrenheit }} °F</td>
+    <td style="width: 5%"><img src="{{ daily.icon_url }}" alt="{{ daily.conditions }}"></td>
+    <td style="width: 17.5%">{{ daily.conditions }}</td>
+    <td>{{ daily.high.fahrenheit }}°F</td>
+    <td>{{ daily.low.fahrenheit }}°F</td>
     <td>{{ daily.avewind.mph }} mph</td>
     <td>{{ daily.pop }}%</td>
     <td>{{ daily.avehumidity }}%</td>
