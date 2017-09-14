@@ -8,6 +8,9 @@ body,
 .container {
   min-width: 1000px;
 }
+body {
+  background-color: #f6f6f6;
+}
 * {
   font-family: "Readventor", Helvetica, Verdana, sans-serif;
 }

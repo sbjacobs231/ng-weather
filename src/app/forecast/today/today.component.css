@@ -1,5 +1,6 @@
 .row {
   padding-top: 50px;
+  margin-bottom: 100px;
 }
 .leftColumn {
   text-align: center;
@@ -46,7 +47,4 @@ h1 {
 }
 .col-xs-4 img {
   width: 100px;
-}
-.row {
-  margin-bottom: 100px;
 }
