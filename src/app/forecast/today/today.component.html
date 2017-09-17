@@ -22,13 +22,13 @@
       <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/7702-200.png" alt="wind-icon">
     </div>
     <div class="col-xs-4">
-      <h3 style="font-size: 48px;letter-spacing: 0.4px;">{{ current.humidity }}%</h3>
+      <h3 style="font-size: 40px;letter-spacing: 0.4px;">{{ current.humidity }}%</h3>
     </div>
   </div>
   <div class="col-xs-8 rightColumn">
     <div class="col-xs-4">
       <h3>{{ current.condition }}</h3>
-      <h3 style="font-size: 20px;letter-spacing: 0.5px;">Feels like: {{ current.feelslike.english }}°F</h3>
+      <h3 style="font-size: 16px;letter-spacing: 0.5px;">Feels like: {{ current.feelslike.english }}°F</h3>
     </div>
     <div class="col-xs-4" *ngFor="let range of (today | async).dailyArray | slice:0:1">
       <h3>{{ range.avewind.mph }} mph</h3>

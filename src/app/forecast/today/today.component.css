@@ -6,13 +6,13 @@
   text-align: center;
 }
 h2 {
-  font-size: 36px;
+  font-size: 30px;
   color: #434343;
   letter-spacing: 0.4px;
 }
 .circle {
-  width: 258px;
-  height: 258px;
+  width: 215px;
+  height: 215px;
   border: solid 8px #62d657;
   margin-top: 15px;
   border-radius: 50%;
@@ -23,12 +23,12 @@ h2 {
 }
 p {
   opacity: 0.75;
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 0.3px;
   color: #434343;
 }
 h1 {
-  font-size: 64px;
+  font-size: 45px;
   letter-spacing: 0.3px;
   color: #62d657;
 }
@@ -41,10 +41,10 @@ h1 {
   text-align: center;
 }
 .rightColumn h3 {
-  font-size: 24px;
+  font-size: 16px;
   letter-spacing: 0.3px;
   color: #434343;
 }
 .col-xs-4 img {
-  width: 100px;
+  width: 70px;
 }

@@ -1,6 +1,5 @@
 div {
   width: 400px;
-  /*background:rgba(255,255,255,0.1);*/
   border-radius: 5px;
   position: absolute;
   top: 110px;
@@ -23,7 +22,7 @@ div:before {
 
 p {
   color: #5b5b5b;;
-  font-size: 23px;
+  font-size: 14px;
   padding-left: 15px;
   margin: 5px 0;
 }

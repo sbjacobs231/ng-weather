@@ -7,14 +7,14 @@
 }
 h3 {
   color: white;
-  font-size: 25px;
+  font-size: 18px;
   padding-left: 12px;
 }
 input {
   margin: 10px 0;
   background: transparent;
   border: none;
-  font-size: 48px;
+  font-size: 40px;
   color: white;
   height: auto;
   letter-spacing: 0.5px;
@@ -50,12 +50,12 @@ input {
   border: none;
   outline: none;
   border-top: 9px solid #dcdcdc;
-  font-size: 20px;
+  font-size: 14px;
   color: #434343;
   background-color: #dcdcdc;
   margin: 0 10px;
-  width: 180px;
-  height: 54px;
+  width: 120px;
+  height: 40px;
   letter-spacing: 0.5px;
 }
 button.active {
@@ -71,6 +71,6 @@ button.active {
 
 @media only screen and (max-width: 1262px) {
   .nav-buttons button {
-    width: 125px;
+    /*width: 125px;*/
   }
 }

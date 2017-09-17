@@ -18,7 +18,7 @@ th {
 th,
 td {
   width: 15%;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
   letter-spacing: 0.5px;
   color: #555555;
@@ -34,4 +34,7 @@ span {
 span.date {
   text-transform: uppercase;
   font-family: "ReadventorBold";
+}
+img {
+  width: 40px;
 }
