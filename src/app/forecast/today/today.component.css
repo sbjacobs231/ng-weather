@@ -6,13 +6,13 @@
   text-align: center;
 }
 h2 {
-  font-size: 30px;
+  font-size: 32px;
   color: #434343;
   letter-spacing: 0.4px;
 }
 .circle {
-  width: 215px;
-  height: 215px;
+  width: 225px;
+  height: 225px;
   border: solid 8px #62d657;
   margin-top: 15px;
   border-radius: 50%;
@@ -23,12 +23,12 @@ h2 {
 }
 p {
   opacity: 0.75;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.3px;
   color: #434343;
 }
 h1 {
-  font-size: 45px;
+  font-size: 47px;
   letter-spacing: 0.3px;
   color: #62d657;
 }
@@ -41,10 +41,11 @@ h1 {
   text-align: center;
 }
 .rightColumn h3 {
-  font-size: 16px;
+  font-size: 22px;
   letter-spacing: 0.3px;
   color: #434343;
+  margin: 10px 0;
 }
 .col-xs-4 img {
-  width: 70px;
+  width: 75px;
 }
