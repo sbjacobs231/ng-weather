@@ -46,6 +46,27 @@ h1 {
   color: #434343;
   margin: 10px 0;
 }
-.col-xs-4 img {
+.col-xs-3 img {
   width: 75px;
+}
+.alerts {
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  min-height: 155px;
+  width: 225px;
+  display: inline-block;
+}
+.alerts h1 {
+  font-size: 35px;
+  display:inline-block;
+  color: black;
+}
+.glyphicon {
+  color: #fe7272;
+  font-size: 30px;
+}
+li {
+  font-size: 16px;
+  text-align: left;
 }

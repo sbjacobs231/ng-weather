@@ -62,7 +62,7 @@ input {
 }
 button.active {
   border-top: 9px solid #e4a258 !important;
-  background-color: #f6f6f6 !important;
+  background-color: #fff !important;
 }
 .contents {
   width: 100%;
